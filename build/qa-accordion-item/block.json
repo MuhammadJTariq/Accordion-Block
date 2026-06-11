@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/qa-accordion-item",
+  "title": "Accordion Item",
+  "category": "widgets",
+  "icon": "arrow-down-alt2",
+  "parent": [
+    "create-block/qa-accordion-block"
+  ],
+  "editorScript": "file:./item.js",
+  "style": "file:./item-style.css",
+  "supports": {
+    "html": false
+  }
+}
