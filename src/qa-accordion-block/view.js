@@ -20,6 +20,24 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log( 'Hello World! (from create-block-qa-accordion-block block)' );
-/* eslint-enable no-console */
+
+const items = document.querySelectorAll(".qa-item");
+
+items.forEach(item => {
+    const content = item.querySelector(".qa-content");
+    const title = item.querySelector('.title-area');
+    const icons = item.querySelector(".dashicons");
+
+    content.style.display = "none";
+    
+    icons.addEventListener("click", function(){
+        if(content.style.display === "none"){
+            content.style.display = "block";
+        }
+        else{
+            content.style.display = "none";
+        }
+    })
+    
+    
+})

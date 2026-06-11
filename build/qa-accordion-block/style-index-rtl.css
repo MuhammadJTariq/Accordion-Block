@@ -7,8 +7,18 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-qa-accordion-block {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.qa-item {
+  width: 100%;
+  font-size: 20px;
+  font-family: inherit;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: red;
+  color: white;
 }

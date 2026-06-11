@@ -1,19 +1,21 @@
-import{ RichText, InnerBlocks } from '@wordpress/block-editor';
+import { RichText, InnerBlocks } from '@wordpress/block-editor';
 
-export default function Edit({attributes, setAttributes}){
-    return (
-        <div className="qa-item">
-            <RichText 
-                tagname="div"
-                className="qa-title"
-                value={attributes.title}
-                onChange={(title) => setAttributes({title})}
-                placeholder='Accordion Title'
-                />
-
-                <div className="qa-content">
-                    <InnerBlocks/>
-                </div>
-        </div>
-    );
+export default function Edit( { attributes, setAttributes } ) {
+	return (
+		<div className="qa-item">
+            <div className="title-area">
+			<RichText
+				tagName="h4"
+				className="qa-title"
+				value={ attributes.title }
+				onChange={ ( title ) => setAttributes( { title } ) }
+				placeholder="Accordion Title"
+			/>
+             <span class="dashicons dashicons-plus-alt2"></span>
+            </div>
+			<div className="qa-content">
+				<InnerBlocks />
+			</div>
+		</div>
+	);
 }

@@ -10,6 +10,14 @@
   ],
   "editorScript": "file:./index.js",
   "style": "file:./item-style.css",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": ".qa-title",
+      "default": ""
+    }
+  },
   "supports": {
     "html": false
   }

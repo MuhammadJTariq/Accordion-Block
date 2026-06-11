@@ -34,6 +34,14 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./item-style.css',
+		'attributes' => array(
+			'title' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.qa-title',
+				'default' => ''
+			)
+		),
 		'supports' => array(
 			'html' => false
 		)
