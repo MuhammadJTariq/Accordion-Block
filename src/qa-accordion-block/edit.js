@@ -29,13 +29,22 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
+import { InnerBlocks } from '@wordpress/block-editor';
+
+const ALLOWED_BLOCKS = [
+    'create-block/qa-accordion-item'
+];
+
 export default function Edit() {
-	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Qa Accordion Block – hello from the editor!',
-				'qa-accordion-block'
-			) }
-		</p>
-	);
+    return (
+        <div className="qa-accordion">
+
+            <InnerBlocks
+                allowedBlocks={ALLOWED_BLOCKS}
+                renderAppender={InnerBlocks.ButtonBlockAppender}
+                orientation="vertical"
+            />
+
+        </div>
+    );
 }

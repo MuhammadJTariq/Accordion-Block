@@ -20,7 +20,6 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	),
 	'qa-accordion-item' => array(
@@ -33,7 +32,7 @@ return array(
 		'parent' => array(
 			'create-block/qa-accordion-block'
 		),
-		'editorScript' => 'file:./item.js',
+		'editorScript' => 'file:./index.js',
 		'style' => 'file:./item-style.css',
 		'supports' => array(
 			'html' => false
