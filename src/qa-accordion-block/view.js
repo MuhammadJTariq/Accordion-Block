@@ -22,20 +22,45 @@
 
 
 const items = document.querySelectorAll(".qa-item");
+const title = document.querySelector('.entry-title');
+
+if (document.querySelector('.qa-accordion')) {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": []
+  };
+
+  const script = document.createElement('script');
+
+  script.id = "faq-schema-" + (title?.textContent?.replace(/\s+/g, '-').toLowerCase() || "default");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(schema);
+
+  document.head.appendChild(script);
+
+  console.log("Schema added:", script);
+}
 
 items.forEach(item => {
     const content = item.querySelector(".qa-content");
     const title = item.querySelector('.title-area');
     const icons = item.querySelector(".dashicons");
 
-    content.style.display = "none";
-    
     icons.addEventListener("click", function(){
-        if(content.style.display === "none"){
-            content.style.display = "block";
+        if(!content.classList.contains('expand')){
+            content.classList.add('expand');
+            if(icons.classList.contains('back')){
+                icons.classList.remove('back');
+            }
+            icons.classList.add('rotate');
+
         }
         else{
-            content.style.display = "none";
+            content.classList.remove('expand');
+            icons.classList.add('back');
+            icons.classList.remove('rotate');
         }
     })
     

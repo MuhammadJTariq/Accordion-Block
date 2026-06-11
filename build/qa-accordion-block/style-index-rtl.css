@@ -18,7 +18,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  background-color: red;
-  color: white;
+  padding: 10px;
+  background-color: #652d2d;
+  color: #ffffff;
+  font-weight: 200;
+}
+.qa-content {
+  padding: 10px;
+  display: none;
+}
+.expand {
+  display: block;
+  height: -moz-max-content;
+  height: max-content;
+  animation: expand 1s ease-in alternate;
+  opacity: 1;
+}
+.rotate {
+  animation: rotate 0.5s ease-in;
+  transform: rotate(-45deg);
+}
+.back {
+  animation: back 0.5s ease-in;
+  transform: rotate(0);
+}
+@keyframes back {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes expand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
