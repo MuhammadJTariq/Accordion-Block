@@ -18,22 +18,37 @@
 	justify-content: space-between;
 	align-items: center;
 	padding:10px;
-	background-color: #652d2d;
-	color: #ffffff;
-	font-weight:200;
+	background-color: rgb(201, 184, 184);
+	font-size:16px;
 }
 
+.qa-title{
+	margin-top:0;
+	margin-bottom:0;
+}
 .qa-content{
 	padding:10px;
 	display: none;
 }
 
 .expand{
+
 	display: block;
 	height: max-content;
 	animation:expand 1s ease-in alternate;
 	opacity: 1;
 
+}
+
+@keyframes expand{
+	from{
+		opacity:0;
+
+	}
+	to{
+		opacity: 1;
+		
+	}
 }
 
 .rotate{
@@ -66,12 +81,3 @@
 }
 
 
-@keyframes expand{
-	from{
-		opacity:0;
-
-	}
-	to{
-		opacity: 1;
-	}
-}
