@@ -9,3 +9,9 @@
 .wp-block-create-block-qa-accordion-block {
   border: 1px dotted #f00;
 }
+.qa-content {
+  display: block;
+}
+.dashicons {
+  display: none;
+}

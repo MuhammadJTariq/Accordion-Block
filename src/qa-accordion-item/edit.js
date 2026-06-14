@@ -1,4 +1,5 @@
-import { RichText, InnerBlocks } from '@wordpress/block-editor';
+import { BlockControls, RichText, InnerBlocks } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton} from '@wordpress/components';
 
 export default function Edit( { attributes, setAttributes } ) {
 	return (

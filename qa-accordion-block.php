@@ -26,5 +26,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function create_block_qa_accordion_block_block_init() {
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+	register_post_type('faq', [
+		'label' => 'FAQS', 
+		'public' => true, 
+		'show_ui' => true, 
+		'show_in_menu' => true, 
+		'show_in_rest' => true, 
+		'template' => ['qa-accordion-block/qa-accordion-block'],
+		'template_lock' => 'all'
+	]);
+	
 }
 add_action( 'init', 'create_block_qa_accordion_block_block_init' );
+
+
+

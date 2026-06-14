@@ -49,20 +49,35 @@ items.forEach(item => {
     const icons = item.querySelector(".dashicons");
 
     icons.addEventListener("click", function(){
-        if(!content.classList.contains('expand')){
-            content.classList.add('expand');
             if(icons.classList.contains('back')){
                 icons.classList.remove('back');
-            }
-            icons.classList.add('rotate');
-
-        }
-        else{
-            content.classList.remove('expand');
+                icons.classList.add('rotate');
+                collapseContent(content, true);
+                return;
+            }     
             icons.classList.add('back');
             icons.classList.remove('rotate');
-        }
+            collapseContent(content, false);
+        
     })
+});
+
     
     
-})
+
+
+ function collapseContent(content, bool){
+        if(bool === true){
+            content.style.height = content.scrollHeight + 'px';
+            content.style.visibility = 'visible';
+            content.style.opacity = '1';
+            content.style.padding = '10px';
+            return;
+        }
+        
+        content.style.height = '0px';
+        content.style.visibility = 'hidden';
+        content.style.opacity = '0';
+        content.style.padding = '0px';
+        return;
+    }
