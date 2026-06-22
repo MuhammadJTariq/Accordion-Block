@@ -9,12 +9,74 @@
 }
 
 
-.qa-content{
+
+
+.dashicons{
 	display: block;
 }
 
-.dashicons{
-	display: none;
+
+
+.qa-item{
+	width:100%;
+	font-size:20px;
+	font-family: inherit;
+	margin-bottom:5px;
 }
+
+.title-area{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px;
+	background-color: rgb(159 52 52);
+	font-size:16px;
+}
+
+.qa-title{
+	margin-top:0;
+	margin-bottom:0;
+}
+.qa-content{
+	display:block;
+	visibility:visible;
+	height:100%;
+	opacity:1;
+	transition:height 0.3s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
+	
+}
+
+
+
+
+.rotate{
+	animation: rotate 0.5s ease-in;
+	transform: rotate(45deg);
+
+}
+
+.back{
+	animation:back 0.5s ease-in;
+	transform: rotate(0);
+}
+
+@keyframes back{
+	from{
+		transform: rotate(45deg);
+	}
+	to{
+		transform: rotate(0);
+	}
+}
+
+@keyframes rotate{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(45deg);
+	}
+}
+
 
 

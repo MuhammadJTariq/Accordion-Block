@@ -1,5 +1,6 @@
 import { BlockControls, RichText, InnerBlocks } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton} from '@wordpress/components';
+import icon from './icon.png';
 
 export default function Edit( { attributes, setAttributes } ) {
 	return (
@@ -12,10 +13,18 @@ export default function Edit( { attributes, setAttributes } ) {
 				onChange={ ( title ) => setAttributes( { title } ) }
 				placeholder="Accordion Title"
 			/>
-             <span class="dashicons dashicons-plus-alt2"></span>
+              <img src={icon} alt='' />
             </div>
 			<div className="qa-content">
-				<InnerBlocks />
+				<InnerBlocks 
+				allowedBlocks={[
+						'core/paragraph',
+						'core/list',
+						'core/image'
+					]}
+					placeholder="Add answer content..."
+				
+				/>
 			</div>
 		</div>
 	);

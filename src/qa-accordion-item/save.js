@@ -1,5 +1,5 @@
 import { RichText, InnerBlocks } from '@wordpress/block-editor';
-
+import icon from './icon.png';
 export default function save( { attributes } ) {
 	return (
 		<div className="qa-item">
@@ -9,7 +9,7 @@ export default function save( { attributes } ) {
 				className="qa-title"
 				value={ attributes.title }
 			/>
-            <span class="dashicons dashicons-plus-alt2"></span>
+            <img src={icon} alt='' />
             </div>
 			<div className="qa-content">
 				<InnerBlocks.Content />

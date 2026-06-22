@@ -32,8 +32,10 @@ function create_block_qa_accordion_block_block_init() {
 		'show_ui' => true, 
 		'show_in_menu' => true, 
 		'show_in_rest' => true, 
-		'template' => ['qa-accordion-block/qa-accordion-block'],
-		'template_lock' => 'all'
+		'supports' => ['editor'],
+		'template' => [ 
+			['create-block/qa-accordion-block']
+		],
 	]);
 	
 }

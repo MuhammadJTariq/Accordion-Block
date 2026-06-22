@@ -46,18 +46,19 @@ if (document.querySelector('.qa-accordion')) {
 items.forEach(item => {
     const content = item.querySelector(".qa-content");
     const title = item.querySelector('.title-area');
-    const icons = item.querySelector(".dashicons");
+    const icons = item.querySelector(".title-area img");
 
     icons.addEventListener("click", function(){
-            if(icons.classList.contains('back')){
-                icons.classList.remove('back');
-                icons.classList.add('rotate');
-                collapseContent(content, true);
+            if(icons.classList.contains('icon-active')){
+                icons.classList.remove('icon-active');
+                icons.style.transform = 'rotate(0)';
+                collapseContent(content, false);
                 return;
-            }     
-            icons.classList.add('back');
-            icons.classList.remove('rotate');
-            collapseContent(content, false);
+            }
+            icons.classList.add('icon-active');
+            icons.style.transform = 'rotate(180deg)';
+            collapseContent(content, true);
+    
         
     })
 });
@@ -68,7 +69,7 @@ items.forEach(item => {
 
  function collapseContent(content, bool){
         if(bool === true){
-            content.style.height = content.scrollHeight + 'px';
+            content.style.height = content.scrollHeight + 20 + 'px';
             content.style.visibility = 'visible';
             content.style.opacity = '1';
             content.style.padding = '10px';

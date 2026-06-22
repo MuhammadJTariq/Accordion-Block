@@ -21,9 +21,28 @@
 	font-size:16px;
 }
 
-.qa-title{
+.title-area{
 	margin-top:0;
 	margin-bottom:0;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	
+	
+
+}
+
+.qa-title{
+	margin:0;
+	
+}
+
+.title-area img{
+	width:30px;
+	height:30xp;
+	transform:roatate(0);
+	transition:transform 0.5s ease-in;
+	
 }
 .qa-content{
 	visibility: hidden;
@@ -34,36 +53,8 @@
 	
 }
 
-
-
-
-.rotate{
-	animation: rotate 0.5s ease-in;
-	transform: rotate(45deg);
-
-}
-
-.back{
-	animation:back 0.5s ease-in;
-	transform: rotate(0);
-}
-
-@keyframes back{
-	from{
-		transform: rotate(45deg);
-	}
-	to{
-		transform: rotate(0);
-	}
-}
-
-@keyframes rotate{
-	from{
-		transform: rotate(0);
-	}
-	to{
-		transform: rotate(45deg);
-	}
+.icon-active{
+	
 }
 
 
