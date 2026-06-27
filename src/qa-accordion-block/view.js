@@ -69,16 +69,27 @@ items.forEach(item => {
 
  function collapseContent(content, bool){
         if(bool === true){
-            content.style.height = content.scrollHeight + 20 + 'px';
-            content.style.visibility = 'visible';
-            content.style.opacity = '1';
-            content.style.padding = '10px';
+            collapseOther();
+            content.classList.add('active');
+            content.style.height = content.scrollHeight + 'px';     
             return;
         }
         
+        content.classList.remove('active');
         content.style.height = '0px';
-        content.style.visibility = 'hidden';
-        content.style.opacity = '0';
-        content.style.padding = '0px';
         return;
     }
+
+function collapseOther(){ 
+    items.forEach(item =>{ 
+        let con = item.querySelector('.qa-content');
+        const icons = item.querySelector(".title-area img");
+        if(con.classList.contains('active')){ 
+            con.classList.remove('active');
+            icons.classList.remove('active');
+            icons.style.transform = 'rotate(0)';
+            con.style.height = '0px';
+        }
+    });
+
+}

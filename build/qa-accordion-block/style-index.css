@@ -11,25 +11,21 @@
   width: 100%;
   font-size: 20px;
   font-family: inherit;
-  margin-bottom: 5px;
 }
 .title-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: rgb(201, 184, 184);
+  padding: 5px;
+  padding-left: 10px;
+  background-color: rgb(62, 5, 62);
   font-size: 16px;
-}
-.title-area {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: rgb(191, 185, 185);
+  border-bottom: 3px solid rgb(255, 0, 0);
 }
 .qa-title {
-  margin: 0;
+  font-size: 1.2rem;
+  color: rgb(225, 220, 220);
 }
 .title-area img {
   width: 30px;
@@ -38,11 +34,12 @@
   transition: transform 0.5s ease-in;
 }
 .qa-content {
-  visibility: hidden;
   height: 0;
-  opacity: 0;
-  padding: 0;
-  transition: height 0.3s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
+  overflow: hidden;
+  transition: height 0.3s ease-in;
+}
+.qa-content > * {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
